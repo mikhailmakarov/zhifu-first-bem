@@ -1,0 +1,14 @@
+{
+  "name": "zhifu-first-bem",
+  "version": "1.0.0",
+  "description": "My first BEM project",
+  "bugs": "https://github.com/mikhailmakarov/zhifu-first-bem/issues",
+  "ignore": [
+    ".bem/cache",
+    "node_modules",
+    "libs"
+  ],
+  "dependencies": {
+    "bem-components": "2.4.0"
+  }
+}
