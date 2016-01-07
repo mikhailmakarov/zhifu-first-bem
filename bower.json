@@ -9,6 +9,7 @@
     "libs"
   ],
   "dependencies": {
-    "bem-components": "2.4.0"
+    "bem-components": "2.4.0",
+    "normalize-css": "normalize.css#~3.0.3"
   }
 }
