@@ -1,0 +1,20 @@
+.calc_screen
+	background-image url("../../img/calc_screen.jpg")
+	background-position 50% -200px
+	background-repeat no-repeat
+	background-size cover
+	min-height 1500px
+	position relative
+
+	&:before
+		content " "
+		position absolute
+		z-index -1
+		left 0
+		right 0
+		top -200px
+		height 200px
+		width 100%
+		background-image url("../../img/calc_screen.jpg")
+		background-position 50% 0
+		background-repeat no-repeat

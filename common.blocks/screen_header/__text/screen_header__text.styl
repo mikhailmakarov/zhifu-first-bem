@@ -1,0 +1,31 @@
+.screen_header__text
+	display inline-block
+	position relative
+	font-family: Exo2;
+	font-size: 48px;
+	text-transform: uppercase;
+	color: #474747;
+
+	&:before
+		content " "
+		display block
+		position absolute
+		width 158px
+		height 8px
+		left -190px
+		top 50%
+		margin-top -4px
+		background-image url("arrow.png")
+		background-repeat no-repeat
+	&:after
+		content " "
+		display block
+		position absolute
+		width 158px
+		height 8px
+		right -190px
+		top 50%
+		margin-top -4px
+		background-image url("arrow.png")
+		background-repeat no-repeat
+		transform: rotate(180deg);
