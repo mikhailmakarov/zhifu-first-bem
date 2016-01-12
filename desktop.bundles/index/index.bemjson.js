@@ -10,7 +10,9 @@ module.exports = {
         { elem : 'css', url : '../../libs/normalize-css/normalize.css' },
         { elem : 'css', url : 'index.min.css' }
     ],
-    scripts: [{ elem : 'js', url : 'index.min.js' }],
+    scripts: [
+        { elem : 'js', url : 'index.min.js' }
+    ],
     content : [
         {
             elem : 'menu_wrapper',
@@ -65,13 +67,11 @@ module.exports = {
                                     content : [
                                         {
                                             block : 'logo',
-                                            content : [
-                                                {
-                                                    block : 'image',
-                                                    alt : 'ORION+',
-                                                    url : '../../img/logo.png'
-                                                }
-                                            ]
+                                            content : {
+                                                block : 'image',
+                                                alt : 'ORION+',
+                                                url : '../../img/logo.png'
+                                            }
                                         },
                                         {
                                             elem : 'description',
@@ -417,6 +417,125 @@ module.exports = {
                     {
                         elem : 'header',
                         content : 'Сколько Вы сможете зарабатывать на продаже в своем регионе?'
+                    },
+                    {
+                        elem : 'calc_lines',
+                        content : [
+                            {
+                                elem : 'calc_line',
+                                content : [
+                                    {
+                                        block : 'input',
+                                        mods : { theme : 'orion' },
+                                        type : 'search',
+                                        placeholder : 'Введите регион'
+                                    },
+                                    {
+                                        block : 'input',
+                                        mods : { theme : 'orion' },
+                                        type : 'search',
+                                        placeholder : 'Введите город'
+                                    },
+                                    {
+                                        block : 'button',
+                                        mods : { theme : 'orion' },
+                                        text : 'ВЫБРАТЬ'
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'calc_line',
+                                content : [
+                                    {
+                                        elem : 'calc_line_centering',
+                                        content : [
+                                            {
+                                                elem : 'calc_line_header',
+                                                content : 'ОБЪЕМ ЗАКУПКИ ПРИСТАВОК (руб.)'
+                                            },
+                                            {
+                                                block : 'input',
+                                                mix : { block : 'calc_screen', elem : 'calc_line_input' },
+                                                mods : { theme : 'orion_short', type : 'search' },
+                                                val : '50000'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem : 'slider_purchases',
+                                        content : 'ЗДЕСЬ БУДЕТ СЛАЙДЕР'
+                                    },
+                                    {
+                                        elem : 'calc_line_centering',
+                                        content : [
+                                            {
+                                                text : '5&nbsp;тыс.руб'
+                                            },
+                                            {
+                                                text : '50&nbsp;тыс.руб'
+                                            },
+                                            {
+                                                text : '100&nbsp;тыс.руб'
+                                            },
+                                            {
+                                                text : '150&nbsp;тыс.руб'
+                                            }
+                                        ].map(function(item) {
+                                            return {
+                                                elem : 'sub_text',
+                                                content : item.text
+                                            };
+                                        })
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'calc_line',
+                                content : [
+                                    {
+                                        elem : 'calc_line_centering',
+                                        content : [
+                                            {
+                                                elem : 'calc_line_header',
+                                                content : 'ИЗДЕРЖКИ - АРЕНДА, ЗАРПЛАТА (руб.)'
+                                            },
+                                            {
+                                                block : 'input',
+                                                mix : { block : 'calc_screen', elem : 'calc_line_input' },
+                                                mods : { theme : 'orion_short', type : 'search' },
+                                                val : '50000'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem : 'slider_outgoings',
+                                        content : 'ЗДЕСЬ БУДЕТ СЛАЙДЕР'
+                                    },
+                                    {
+                                        elem : 'calc_line_centering',
+                                        content : [
+                                            {
+                                                text : '5&nbsp;тыс.руб'
+                                            },
+                                            {
+                                                text : '50&nbsp;тыс.руб'
+                                            },
+                                            {
+                                                text : '100&nbsp;тыс.руб'
+                                            },
+                                            {
+                                                text : '150&nbsp;тыс.руб'
+                                            }
+                                        ].map(function(item) {
+                                            return {
+                                                elem : 'sub_text',
+                                                content : item.text
+                                            };
+                                        })
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             }
@@ -431,9 +550,47 @@ module.exports = {
         {
             block : 'footer',
             content : {
-                block : 'wrapper',
+                elem : 'wrapper',
+                mix : { block : 'wrapper' },
                 content : [
-                    'footer content goes here'
+                    {
+                        elem : 'logo',
+                        content : [
+                            {
+                                block : 'image',
+                                mix : { block : 'footer', elem : 'logo_image' },
+                                alt : 'ORION+',
+                                url : '../../img/logo.png'
+                            },
+                            {
+                                elem : 'description',
+                                mix : { block : 'footer', elem : 'description' },
+                                content: 'Оптовые продажи приставок для бесплатного цифрового телевидения'
+                            }
+                        ]
+                    },
+                    {
+                        block : 'edison',
+                        mix : { block : 'footer', elem : 'edison' },
+                        content : [
+                            {
+                                elem : 'header',
+                                content : 'Этот сайт увидел свет в рекламной студии'
+                            },
+                            {
+                                elem : 'logo'
+                            }
+                        ]
+                    },
+                    {
+                        elem : 'callback',
+                        content : {
+                            block : 'button',
+                            mix : { block : 'footer', elem : 'button' },
+                            mods : { theme : 'orion' },
+                            text : 'Задать свой вопрос'
+                        }
+                    }
                 ]
             }
         }

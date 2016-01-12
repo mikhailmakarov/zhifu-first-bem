@@ -6,7 +6,8 @@
   "ignore": [
     ".bem/cache",
     "node_modules",
-    "libs"
+    "libs",
+    "dist"
   ],
   "dependencies": {
     "bem-components": "2.4.0",

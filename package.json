@@ -1,5 +1,5 @@
 {
-  "author": "",
+  "author": "Mikhail Makarov",
   "name": "zhifu-first-bem",
   "version": "1.0.0",
   "repository": {
@@ -10,7 +10,7 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "bower": "^1.6.5",
+    "bower": "^1.6.5"
   },
   "devDependencies": {
     "bem": "^0.10.2",
@@ -23,9 +23,10 @@
     "enb-stylus": "^2.2.0"
   },
   "scripts": {
-    "start": "enb server",
+    "start": "enb server -p 888",
     "postinstall": "npm run deps",
-    "deps": "bower i"
+    "deps": "bower i",
+    "dist" : "YENV=production enb make dist"
   },
   "private": true
 }
