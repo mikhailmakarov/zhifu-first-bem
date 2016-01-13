@@ -28,7 +28,7 @@
     "start": "enb server -p 888",
     "postinstall": "npm run deps",
     "deps": "bower i",
-    "dist": "YENV=production enb make dist"
+    "dist": "YENV=production enb make dist -n"
   },
   "private": true
 }
