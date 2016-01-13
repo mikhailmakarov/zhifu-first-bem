@@ -541,6 +541,13 @@ module.exports = {
             }
         },
         {
+            block : 'screen_header',
+            content : {
+                elem : 'text',
+                content : 'Посмотрите результаты наших клиентов'
+            }
+        },
+        {
             block : 'faq',
             content : {
                 elem : 'wrapper',
@@ -573,7 +580,24 @@ module.exports = {
                             content : [
                                 {
                                     elem : 'question',
-                                    content : item.question
+                                    content : [
+                                        {
+                                            elem : 'question_text',
+                                            content : item.question
+                                        },
+                                        {
+                                            elem : 'question_button',
+                                            content : [
+                                                'Читать ответ',
+                                                {
+                                                    block : 'button',
+                                                    mix : { block : 'faq', elem : 'button' },
+                                                    mods : { theme : 'orion' },
+                                                    text : '>'
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 },
                                 {
                                     elem : 'answer',
@@ -583,13 +607,6 @@ module.exports = {
                         };
                     })
                 ]
-            }
-        },
-        {
-            block : 'screen_header',
-            content : {
-                elem : 'text',
-                content : 'Посмотрите результаты наших клиентов'
             }
         },
         {

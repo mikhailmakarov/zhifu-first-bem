@@ -1,4 +1,21 @@
 .faq
+	position relative
 	background-image url(../../img/faq_screen.jpg)
 	background-position 50% 0
 	background-repeat no-repeat
+	padding-bottom 100px
+
+	&:after
+		content " "
+		position absolute
+		left 0
+		right 0
+		bottom 0
+		height 100px
+		width 100%
+		background-color: rgba(255,255,255,0);
+		background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
+		background-image: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
+		background-image: -o-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
+		background-image: -ms-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
+		background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
