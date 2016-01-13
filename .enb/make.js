@@ -1,4 +1,8 @@
-var techs = {
+var path = require('path'),
+    glob = require('glob'),
+    fse = require('fs-extra'),
+    rootDir = process.cwd(),
+    techs = {
         // essential
         fileProvider: require('enb/techs/file-provider'),
         fileMerge: require('enb/techs/file-merge'),

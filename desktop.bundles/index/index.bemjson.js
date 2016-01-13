@@ -541,11 +541,68 @@ module.exports = {
             }
         },
         {
+            block : 'faq',
+            content : {
+                elem : 'wrapper',
+                mix : { block : 'wrapper' },
+                content : [
+                    {
+                        elem : 'header',
+                        content : '4 вопроса, которые задает каждый 2-й наш клиент:'
+                    },
+                    [
+                        {
+                            question : 'Какая минимальная партия закупки?',
+                            answer : 'Минимальная партия закупки составляет от 10 штук'
+                        },
+                        {
+                            question : 'Как сделать заказ?',
+                            answer : 'Минимальная партия закупки составляет от 10 штук'
+                        },
+                        {
+                            question : 'Как часто меняется прайс лист?',
+                            answer : 'Минимальная партия закупки составляет от 10 штук'
+                        },
+                        {
+                            question : 'Можно ли купить в рассрочку или кредит?',
+                            answer : 'Минимальная партия закупки составляет от 10 штук'
+                        }
+                    ].map(function (item) {
+                        return {
+                            elem : 'item_container',
+                            content : [
+                                {
+                                    elem : 'question',
+                                    content : item.question
+                                },
+                                {
+                                    elem : 'answer',
+                                    content : item.answer
+                                }
+                            ]
+                        };
+                    })
+                ]
+            }
+        },
+        {
             block : 'screen_header',
             content : {
                 elem : 'text',
                 content : 'Посмотрите результаты наших клиентов'
             }
+        },
+        {
+            elem : 'last_header',
+            content : 'Если у Вас остались вопросы звоните по телефону:'
+        },
+        {
+            elem : 'last_header_phone',
+            content : '8 (800) 400-11-29'
+        },
+        {
+            elem : 'last_sub_header',
+            content : 'Наш менеджер ответит на все интересующие вопросы за 2 минуты.'
         },
         {
             block : 'footer',
