@@ -2,7 +2,8 @@
 	"freeze_paths" : {
 		"img/**" : "dist/_",
 		"**/*.blocks/**" : "dist/_",
-		"fonts/**" : "dist/_"
+		"fonts/**" : "dist/_",
+		"libs/**" : "dist/_"
 	},
 
 	"paths" : {

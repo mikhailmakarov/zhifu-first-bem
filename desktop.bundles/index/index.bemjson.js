@@ -8,10 +8,13 @@ module.exports = {
         { elem : 'meta', attrs : { name : 'author', content : 'Mikhail Makarov' } },
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
         { elem : 'css', url : '../../libs/normalize-css/normalize.css' },
+        { elem : 'css', url : '../../js/jquery-ui.min.css'},
         { elem : 'css', url : 'index.min.css' }
     ],
     scripts: [
-        { elem : 'js', url : 'index.min.js' }
+        { elem : 'js', url : 'index.min.js' },
+        { elem : 'js', url : '../../libs/jquery/dist/jquery.min.js' },
+        { elem : 'js', url : '../../js/jquery-ui.min.js'}
     ],
     content : [
         {
@@ -102,7 +105,7 @@ module.exports = {
                     content : {
                         elem : 'text',
                         tag : 'h1',
-                        content : 'Приставки DTB-T2 с&nbsp;возможностью наценки до&nbsp;100% в условиях кризиса!'
+                        content : 'Приставки DVB-T2 с&nbsp;возможностью наценки до&nbsp;100% в условиях кризиса!'
                     }
                 },
                 {
@@ -238,7 +241,7 @@ module.exports = {
         {
             elem : 'second_screen_header',
             tag : 'h2',
-            content : '9 бонусов, которые позволяют отлично зарабатывать на продаже DTB-T2!'
+            content : '9 бонусов, которые позволяют отлично зарабатывать на продаже DVB-T2!'
         },
         {
             block : 'second_screen',
@@ -462,8 +465,8 @@ module.exports = {
                                         ]
                                     },
                                     {
-                                        elem : 'slider_purchases',
-                                        content : 'ЗДЕСЬ БУДЕТ СЛАЙДЕР'
+                                        elem : 'slider',
+                                        js : true
                                     },
                                     {
                                         elem : 'calc_line_centering',
@@ -508,8 +511,9 @@ module.exports = {
                                         ]
                                     },
                                     {
-                                        elem : 'slider_outgoings',
-                                        content : 'ЗДЕСЬ БУДЕТ СЛАЙДЕР'
+                                        elem : 'slider',
+                                        js : true,
+                                        content : 'lalala'
                                     },
                                     {
                                         elem : 'calc_line_centering',
@@ -537,7 +541,73 @@ module.exports = {
                             },
                             {
                                 elem : 'calc_line',
-                                content : 'Здесь выбор наценки'
+                                content : [
+                                    {
+                                        elem : 'calc_line_header',
+                                        mods : { float : 'left' },
+                                        content : 'НАЦЕНКА'
+                                    },
+                                    {
+                                        block : 'radio-group',
+                                        mix : { block : 'calc_screen', elem : 'nacenka_selector' },
+                                        mods : { theme : 'orion', type : 'line' },
+                                        options : [
+                                            { val : 50, text : '50%' },
+                                            { val : 75, text : '75%' },
+                                            { val : 100, text : '100%' }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem : 'bottom',
+                        content : [
+                            {
+                                elem : 'bottom_item',
+                                content : [
+                                    {
+                                        block : 'image',
+                                        url : '../../img/purchases.png'
+                                    },
+                                    'Закупка: ',
+                                    {
+                                        elem : 'purchases_num',
+                                        tag : 'span',
+                                        content : '50&nbsp;000&nbsp;руб.'
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'bottom_item',
+                                content : [
+                                    {
+                                        block : 'image',
+                                        url : '../../img/profit.png'
+                                    },
+                                    'Чистая прибыль: ',
+                                    {
+                                        elem : 'profit_num',
+                                        tag : 'span',
+                                        content : '105&nbsp;000&nbsp;руб.'
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'result',
+                                content : [
+                                    'За 12 месяцев я получу:',
+                                    {
+                                        elem : 'profit_year',
+                                        content : '1&nbsp;260&nbsp;000&nbsp;руб.'
+                                    },
+                                    {
+                                        block : 'button',
+                                        mods : { theme : 'orion' },
+                                        text : 'Хочу такую прибыль'
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -615,7 +685,7 @@ module.exports = {
                             city : 'Коломна',
                             status : 'Установщики антенного оборудования',
                             salary : '80 000 руб',
-                            text : 'Занимаюсь установкой антенного оборудования, сам я монтажник. Периодически работа стационарных антен не устраивает клиентов и я предлагаю установку DTB-T2. Не было ни одного возврата. Товар отличный!'
+                            text : 'Занимаюсь установкой антенного оборудования, сам я монтажник. Периодически работа стационарных антен не устраивает клиентов и я предлагаю установку DVB-T2. Не было ни одного возврата. Товар отличный!'
                         },
                         right : {
                             image : 'nikiforovis',
@@ -730,7 +800,7 @@ module.exports = {
                             city : 'Воронеж',
                             status : 'Магазины радиотоваров',
                             salary : '40 000 руб',
-                            text : 'Приобрел приставки для расширения товарного выбора. Покупают достаточно часто. За месяц сделал 40 000 руб только на приставках dtb-t2!'
+                            text : 'Приобрел приставки для расширения товарного выбора. Покупают достаточно часто. За месяц сделал 40 000 руб только на приставках dvb-t2!'
                         },
                         right : {
                             image : 'kolesnikovov',

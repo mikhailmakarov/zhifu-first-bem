@@ -27,7 +27,8 @@
   "scripts": {
     "start": "enb server -p 888",
     "postinstall": "npm run deps",
-    "deps": "bower i",
+    "deps": "bower i --allow-root",
+    "clean": "enb make clean",
     "dist": "YENV=production enb make dist -n"
   },
   "private": true

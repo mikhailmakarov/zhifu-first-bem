@@ -1,0 +1,42 @@
+.radio-group_theme_orion .radio__control
+	display none
+
+.radio-group_theme_orion .radio__text
+	display inline-block
+	position relative
+	padding-left 50px
+
+.radio-group_theme_orion .radio__text:before
+	content " "
+	position absolute
+	width: 32px;
+	height: 32px;
+	left 0
+	top 50%
+	margin-top -16px
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,.7), inset 0 1px 0 1px #fff;
+	-moz-box-shadow: 0 2px 5px rgba(0,0,0,.7), inset 0 1px 0 1px #fff;
+	box-shadow: 0 2px 5px rgba(0,0,0,.7), inset 0 1px 0 1px #fff;
+	background-image: -webkit-linear-gradient(bottom, rgba(88,92,102,.1), rgba(234,234,235,.1));
+	background-image: -moz-linear-gradient(bottom, rgba(88,92,102,.1), rgba(234,234,235,.1));
+	background-image: -o-linear-gradient(bottom, rgba(88,92,102,.1), rgba(234,234,235,.1));
+	background-image: -ms-linear-gradient(bottom, rgba(88,92,102,.1), rgba(234,234,235,.1));
+	background-image: linear-gradient(to top, rgba(88,92,102,.1), rgba(234,234,235,.1));
+
+.radio-group_theme_orion .radio_checked .radio__text:after
+	content " "
+	position absolute
+	width: 20px;
+	height: 20px;
+	left 6px
+	top 50%
+	margin-top -10px
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #000;
+
