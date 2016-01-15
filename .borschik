@@ -3,7 +3,8 @@
 		"img/**" : "dist/_",
 		"**/*.blocks/**" : "dist/_",
 		"fonts/**" : "dist/_",
-		"libs/**" : "dist/_"
+		"libs/**" : "dist/_",
+		"js/**" : "dist/_"
 	},
 
 	"paths" : {
