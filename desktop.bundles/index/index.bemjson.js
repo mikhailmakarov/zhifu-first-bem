@@ -12,9 +12,9 @@ module.exports = {
         { elem : 'css', url : 'index.min.css' }
     ],
     scripts: [
-        { elem : 'js', url : 'index.min.js' },
         { elem : 'js', url : '../../libs/jquery/dist/jquery.min.js' },
-        { elem : 'js', url : '../../js/jquery-ui.min.js'}
+        { elem : 'js', url : '../../js/jquery-ui.min.js'},
+        { elem : 'js', url : 'index.min.js' }
     ],
     content : [
         {
@@ -414,6 +414,7 @@ module.exports = {
         },
         {
             block : 'calc_screen',
+            js : true,
             content : {
                 elem : 'wrapper',
                 content : [
@@ -458,7 +459,7 @@ module.exports = {
                                             },
                                             {
                                                 block : 'input',
-                                                mix : { block : 'calc_screen', elem : 'calc_line_input' },
+                                                mix : { block : 'calc_screen', elem : 'purchases_input' },
                                                 mods : { theme : 'orion_short', type : 'search' },
                                                 val : '50000'
                                             }
@@ -504,16 +505,15 @@ module.exports = {
                                             },
                                             {
                                                 block : 'input',
-                                                mix : { block : 'calc_screen', elem : 'calc_line_input' },
+                                                mix : { block : 'calc_screen', elem : 'outgoings_input' },
                                                 mods : { theme : 'orion_short', type : 'search' },
-                                                val : '50000'
+                                                val : '10000'
                                             }
                                         ]
                                     },
                                     {
                                         elem : 'slider',
-                                        js : true,
-                                        content : 'lalala'
+                                        js : true
                                     },
                                     {
                                         elem : 'calc_line_centering',
@@ -522,13 +522,13 @@ module.exports = {
                                                 text : '5&nbsp;тыс.руб'
                                             },
                                             {
-                                                text : '50&nbsp;тыс.руб'
+                                                text : '15&nbsp;тыс.руб'
                                             },
                                             {
-                                                text : '100&nbsp;тыс.руб'
+                                                text : '30&nbsp;тыс.руб'
                                             },
                                             {
-                                                text : '150&nbsp;тыс.руб'
+                                                text : '60&nbsp;тыс.руб'
                                             }
                                         ].map(function(item) {
                                             return {
