@@ -951,6 +951,7 @@ module.exports = {
         },
         {
             block : 'faq',
+            js : true,
             content : {
                 elem : 'wrapper',
                 mix : { block : 'wrapper' },
@@ -979,6 +980,7 @@ module.exports = {
                     ].map(function (item) {
                         return {
                             elem : 'item_container',
+                            mix : { block : 'faq', elem : 'answer_hidden' },
                             content : [
                                 {
                                     elem : 'question',

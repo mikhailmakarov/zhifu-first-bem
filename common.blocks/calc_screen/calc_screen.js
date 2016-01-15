@@ -1,4 +1,4 @@
-modules.define('calc_screen', ['i-bem__dom'], function(provide, BEMDOM) {
+/*modules.define('calc_screen', ['i-bem__dom'], function(provide, BEMDOM) {
 
     provide(BEMDOM.decl(this.name, {
         onSetMod: {
@@ -31,5 +31,4 @@ modules.define('calc_screen', ['i-bem__dom'], function(provide, BEMDOM) {
             
         }
     }));
-
-});
+});*/
