@@ -14,7 +14,10 @@
         $('.calc_screen__profit_num').html(beautify_num(purchases*nacenka/100-outgoings) + '&nbsp;руб.');
         $('.calc_screen__profit_year').html(beautify_num((purchases*nacenka/100-outgoings)*12) + '&nbsp;руб.');
     }
-    $('.calc_screen__nacenka_selector .radio').on('click', calculate);
+    calculate();
+    $('.calc_screen__nacenka_selector .radio').on('click', function() {
+    	setTimeout(calculate, 50);
+    });
 	$('.calc_screen__slider:first').slider({
 		range: 'min',
 		min: 5000,
@@ -37,4 +40,30 @@
 		    calculate();
 		}
 	});
+
+	$('.recalls__button').on('click', function() {
+		var $this = $(this);
+		var group = $this.attr('class').toString().match(/recalls__group_([\d]+)/i);
+		if($this.hasClass('recalls__button_active_yes')) return;
+
+		$('.recalls__button_active_yes').removeClass('recalls__button_active_yes');
+		$('.recalls__container_active_yes').removeClass('recalls__container_active_yes');
+
+		$('.recalls__button.' + group[0]).addClass('recalls__button_active_yes');
+		$('.recalls__container.' + group[0]).addClass('recalls__container_active_yes');
+	});
+
+	$('.slider__good_item').on('click', function() {
+		var $this = $(this);
+
+		if($this.find('.slider__name').hasClass('slider__name_active_yes')) return;
+
+		$('.slider__name.slider__name_active_yes').removeClass('slider__name_active_yes');
+
+		$this.find('.slider__name').addClass('slider__name_active_yes');
+
+		$this.parents('.slider').find('.slider__big_image').attr('src', $this.find('.slider__icon').attr('src'));
+		$this.parents('.slider').find('.slider__editable_header').html('ORION+&nbsp;' + $this.find('.slider__name').html());
+	});
+
 })(jQuery);

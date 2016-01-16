@@ -26,31 +26,34 @@ module.exports = {
                     mods : { theme : 'orion' },
                     content : [
                         {
-                            block : 'menu-item',
-                            val : 1,
+                            hash : 'get_prices',
                             content : 'ДОСТУП К ЦЕНАМ'
                         },
                         {
-                            block : 'menu-item',
-                            val : 1,
+                            hash : 'catalog',
                             content : 'КАТАЛОГ'
                         },
                         {
-                            block : 'menu-item',
-                            val : 1,
+                            hash : 'catalog',
                             content : 'РАСЧЕТ ЗАРАБОТКА ПО РЕГИОНУ'
                         },
                         {
-                            block : 'menu-item',
-                            val : 1,
+                            hash : 'recalls',
                             content : 'ОТЗЫВЫ'
                         },
                         {
-                            block : 'menu-item',
-                            val : 1,
+                            hash : 'faq',
                             content : 'ВОПРОСЫ'
                         }
-                    ]
+                    ].map(function(item) {
+                        return {
+                            block : 'menu-item',
+                            val : item.val,
+                            tag : 'a',
+                            attrs : { href : '#' + item.hash },
+                            content : item.content
+                        }
+                    })
                 }
             }
         },
@@ -152,6 +155,7 @@ module.exports = {
                         },
                         {
                             block : 'promo',
+                            attrs : { id : 'get_prices' },
                             mix : { block : 'clearfix' },
                             content : [
                                 {
@@ -328,6 +332,7 @@ module.exports = {
         },
         {
             block : 'screen_header',
+            attrs: { id : 'catalog' },
             content : {
                 elem : 'text',
                 content : 'КАТАЛОГ'
@@ -359,7 +364,7 @@ module.exports = {
                             {
                                 elem : 'header',
                                 mix : { block : 'slider', elem : 'editable_header' },
-                                content : 'ORION+&nbsp;RS&nbsp;T&nbsp;19&nbsp;HD'
+                                content : 'ORION+&nbsp;RS-T19HD'
                             },
                             {
                                 block : 'button',
@@ -414,6 +419,7 @@ module.exports = {
         },
         {
             block : 'calc_screen',
+            attrs : { id : 'calculator' },
             js : true,
             content : {
                 elem : 'wrapper',
@@ -549,6 +555,7 @@ module.exports = {
                                     },
                                     {
                                         block : 'radio-group',
+                                        val : 75,
                                         mix : { block : 'calc_screen', elem : 'nacenka_selector' },
                                         mods : { theme : 'orion', type : 'line' },
                                         options : [
@@ -616,6 +623,7 @@ module.exports = {
         },
         {
             block : 'screen_header',
+            attrs : { id : 'recalls' },
             content : {
                 elem : 'text',
                 content : 'Посмотрите результаты наших клиентов'
@@ -647,15 +655,15 @@ module.exports = {
                         },
                         {
                             text : 'Рынки',
-                            group : 5
+                            group : 9
                         },
                         {
                             text : 'Магазины электроники и бытовой техники',
-                            group : 6
+                            group : 5
                         },
                         {
                             text : 'Магазины CD/DVD',
-                            group : 7
+                            group : 6
                         },
                         {
                             text : 'Магазины товаров для&nbsp;дома',
@@ -663,7 +671,7 @@ module.exports = {
                         },
                         {
                             text : 'Магазины радиотоваров',
-                            group : 9
+                            group : 7
                         }
                     ].map(function(item) {
                         return {
@@ -951,6 +959,7 @@ module.exports = {
         },
         {
             block : 'faq',
+            attrs : { id : 'faq' },
             js : true,
             content : {
                 elem : 'wrapper',
