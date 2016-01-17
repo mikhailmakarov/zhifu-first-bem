@@ -6,7 +6,6 @@
         var purchases = $('.calc_screen__purchases_input input').val(),
             outgoings = $('.calc_screen__outgoings_input input').val(),
             nacenka = 75;
-        console.log(purchases);
         if($('.calc_screen__nacenka_selector .radio_checked')) {
             nacenka = $('.calc_screen__nacenka_selector .radio_checked input').val();
         }
@@ -15,9 +14,11 @@
         $('.calc_screen__profit_year').html(beautify_num((purchases*nacenka/100-outgoings)*12) + '&nbsp;руб.');
     }
     calculate();
+
     $('.calc_screen__nacenka_selector .radio').on('click', function() {
     	setTimeout(calculate, 50);
     });
+
 	$('.calc_screen__slider:first').slider({
 		range: 'min',
 		min: 5000,
@@ -29,6 +30,7 @@
 		    calculate();
 		}
 	});
+
 	$('.calc_screen__slider:last').slider({
 		range: 'min',
 		min: 5000,
@@ -39,18 +41,6 @@
 		    $(ui.handle).closest('.calc_screen__calc_line').find('input').val(ui.value);
 		    calculate();
 		}
-	});
-
-	$('.recalls__button').on('click', function() {
-		var $this = $(this);
-		var group = $this.attr('class').toString().match(/recalls__group_([\d]+)/i);
-		if($this.hasClass('recalls__button_active_yes')) return;
-
-		$('.recalls__button_active_yes').removeClass('recalls__button_active_yes');
-		$('.recalls__container_active_yes').removeClass('recalls__container_active_yes');
-
-		$('.recalls__button.' + group[0]).addClass('recalls__button_active_yes');
-		$('.recalls__container.' + group[0]).addClass('recalls__container_active_yes');
 	});
 
 	$('.slider__good_item').on('click', function() {

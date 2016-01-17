@@ -66,6 +66,7 @@ module.exports = {
                         block : 'wrapper',
                         content : {
                             block : 'header',
+                            js : true,
                             content : [
                                 {
                                     elem : 'side',
@@ -90,11 +91,11 @@ module.exports = {
                                     elemMods : { align : 'right' },
                                     content : [
                                         {
-                                            block : 'phone',
+                                            elem : 'phone',
                                             content : '8 (800) 400-11-29'
                                         },
                                         {
-                                            block : 'callback',
+                                            elem : 'callback',
                                             content : 'Вам перезвонить?'
                                         }
                                     ]
@@ -1080,6 +1081,74 @@ module.exports = {
                     }
                 ]
             }
+        },
+        {
+            block : 'popup_callback',
+            content : [
+                {
+                    elem : 'close_button',
+                    content : 'X'
+                },
+                {
+                    elem : 'header',
+                    content : 'ЗАДАТЬ СВОЙ ВОПРОС'
+                },
+                {
+                    elem : 'block',
+                    content : 'Оставьте заявку и наш менеджер даст исчерпывающий ответ на любой Ваш вопрос'
+                },
+                {
+                    elem : 'block',
+                    content : {
+                        block : 'input',
+                        mods : { theme : 'orion', icon : 'phone' },
+                        name : 'phone',
+                        placeholder : 'Введите телефон'
+                    },
+                },
+                {
+                    elem : 'block',
+                    content : {
+                        block : 'button',
+                        mods : { theme : 'orion' },
+                        text : 'ЗАДАТЬ СВОЙ ВОПРОС'
+                    }
+                }
+            ]
+        },
+        {
+            block : 'popup_getsystem',
+            content : [
+                {
+                    elem : 'close_button',
+                    content : 'X'
+                },
+                {
+                    elem : 'header',
+                    content : 'ПОЛУЧИТЕ СИСТЕМУ ПРОДАЖ'
+                },
+                {
+                    elem : 'block',
+                    content : 'Оставьте заявку и наш менеджер расскажет все о пошаговой системе продаж DVB-T2!'
+                },
+                {
+                    elem : 'block',
+                    content : {
+                        block : 'input',
+                        mods : { theme : 'orion', icon : 'phone' },
+                        name : 'phone',
+                        placeholder : 'Введите телефон'
+                    },
+                },
+                {
+                    elem : 'block',
+                    content : {
+                        block : 'button',
+                        mods : { theme : 'orion' },
+                        text : 'ПОЛУЧИТЬ СИСТЕМУ ПРОДАЖ'
+                    }
+                }
+            ]
         }
     ]
 };
