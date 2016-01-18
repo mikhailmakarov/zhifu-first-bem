@@ -39,7 +39,7 @@
 	$('.popup_callback__close_button').on('click', function() {
 		dialog.dialog('close');
 	});
-	$('.header__callback').on('click', function() {
+	$('.header__callback, .footer__button, .calc_screen__result button').on('click', function() {
 		dialog.dialog('open');
 	});
 })(jQuery);

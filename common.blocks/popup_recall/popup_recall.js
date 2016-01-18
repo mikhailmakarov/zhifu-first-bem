@@ -1,10 +1,10 @@
 (function($) {
-	var dialog = $('.popup_getsystem').dialog({
+	var dialog = $('.popup_recall').dialog({
 		dialogClass: 'dialog_fixed',
 		autoOpen: false,
 		resizable: false,
 		modal : true,
-		width : 500,
+		width : 900,
 		open : function() {
 			var dialog = $(this);
 			$('.ui-widget-overlay').on('click', function() {
@@ -12,10 +12,10 @@
 			});
 		}
 	});
-	$('.popup_getsystem__close_button').on('click', function() {
+	$('.popup_recall__close_button').on('click', function() {
 		dialog.dialog('close');
 	});
-	$('.page__getprices_button').on('click', function() {
+	$('.recall__write').on('click', function() {
 		dialog.dialog('open');
 	});
 })(jQuery);

@@ -1,5 +1,5 @@
 (function($) {
-	var dialog = $('.popup_getsystem').dialog({
+	var dialog = $('.popup_getprices').dialog({
 		dialogClass: 'dialog_fixed',
 		autoOpen: false,
 		resizable: false,
@@ -12,10 +12,10 @@
 			});
 		}
 	});
-	$('.popup_getsystem__close_button').on('click', function() {
+	$('.popup_getprices__close_button').on('click', function() {
 		dialog.dialog('close');
 	});
-	$('.page__getprices_button').on('click', function() {
+	$('.slider__button').on('click', function() {
 		dialog.dialog('open');
 	});
 })(jQuery);

@@ -327,6 +327,7 @@ module.exports = {
             elem : 'bonus_button_wrapper',
             content : {
                 block : 'button',
+                mix : { block : 'page', elem : 'getprices_button' },
                 mods : { theme : 'orion' },
                 text : 'Получить отлаженную систему продаж'
             }
@@ -1104,7 +1105,7 @@ module.exports = {
                         mods : { theme : 'orion', icon : 'phone' },
                         name : 'phone',
                         placeholder : 'Введите телефон'
-                    },
+                    }
                 },
                 {
                     elem : 'block',
@@ -1138,7 +1139,7 @@ module.exports = {
                         mods : { theme : 'orion', icon : 'phone' },
                         name : 'phone',
                         placeholder : 'Введите телефон'
-                    },
+                    }
                 },
                 {
                     elem : 'block',
@@ -1147,6 +1148,163 @@ module.exports = {
                         mods : { theme : 'orion' },
                         text : 'ПОЛУЧИТЬ СИСТЕМУ ПРОДАЖ'
                     }
+                }
+            ]
+        },
+        {
+            block : 'popup_getprices',
+            content : [
+                {
+                    elem : 'close_button',
+                    content : 'X'
+                },
+                {
+                    elem : 'header',
+                    content : 'ПОЛУЧИТЕ ПРАЙС ЛИСТ'
+                },
+                {
+                    elem : 'block',
+                    content : 'Оставьте заявку и наш менеджер свяжется с Вами и вышлет прайс на почту'
+                },
+                {
+                    elem : 'block',
+                    content : {
+                        block : 'input',
+                        mods : { theme : 'orion', icon : 'user' },
+                        name : 'name',
+                        placeholder : 'Введите имя'
+                    }
+                },
+                {
+                    elem : 'block',
+                    content : {
+                        block : 'input',
+                        mods : { theme : 'orion', icon : 'phone' },
+                        name : 'phone',
+                        placeholder : 'Введите телефон'
+                    }
+                },
+                {
+                    elem : 'block',
+                    content : {
+                        block : 'input',
+                        mods : { theme : 'orion', icon : 'mail' },
+                        name : 'email',
+                        placeholder : 'Введите e-mail'
+                    }
+                },
+                {
+                    elem : 'block',
+                    content : {
+                        block : 'button',
+                        mods : { theme : 'orion' },
+                        text : 'ПОЛУЧИТЬ ПРАЙС ЛИСТ'
+                    }
+                }
+            ]
+        },
+        {
+            block : 'popup_recall',
+            mix : { block : 'clearfix' },
+            content : [
+                {
+                    elem : 'close_button',
+                    content : 'X'
+                },
+                {
+                    elem : 'side',
+                    mods : { align : 'left' },
+                    content : [
+                        {
+                            elem : 'block',
+                            content : {
+                                block : 'input',
+                                mods : { theme : 'orion' },
+                                name : 'name',
+                                placeholder : 'Введите имя*'
+                            }
+                        },
+                        {
+                            elem : 'block',
+                            content : {
+                                block : 'input',
+                                mods : { theme : 'orion' },
+                                name : 'lastname',
+                                placeholder : 'Введите фамилию*'
+                            }
+                        },
+                        {
+                            elem : 'block',
+                            content : {
+                                block : 'input',
+                                mods : { theme : 'orion' },
+                                name : 'middlename',
+                                placeholder : 'Введите отчество'
+                            }
+                        },
+                        {
+                            elem : 'block',
+                            content : {
+                                block : 'input',
+                                mods : { theme : 'orion' },
+                                name : 'offer',
+                                placeholder : 'Введите номер договора*'
+                            }
+                        },
+                        {
+                            elem : 'block',
+                            content : {
+                                block : 'input',
+                                mods : { theme : 'orion' },
+                                name : 'salary',
+                                placeholder : 'Результат (руб/мес)*'
+                            }
+                        },
+                        {
+                            elem : 'block',
+                            content : {
+                                block : 'input',
+                                mods : { theme : 'orion' },
+                                name : 'city',
+                                placeholder : 'Введите город*'
+                            }
+                        },
+                        {
+                            elem : 'block',
+                            content : {
+                                block : 'checkbox',
+                                mods : { theme : 'orion' },
+                                name : 'agreement',
+                                text : 'Даю согласие на публикацию отзыва на сайте'
+                            }
+                        },
+                        {
+                            content : 'Все поля с * обязательны для заполнения'
+                        }
+                    ]
+                },
+                {
+                    elem : 'side',
+                    mods : { align : 'right' },
+                    content : [
+                        {
+                            elem : 'block',
+                            content : {
+                                block : 'input',
+                                mods : { theme : 'orion' },
+                                name : 'recall',
+                                placeholder : 'Введите текст отзыва'
+                            }
+                        },
+                        {
+                            elem : 'block',
+                            content : {
+                                block : 'button',
+                                mods : { theme : 'orion' },
+                                text : 'ОСТАВИТЬ ОТЗЫВ'
+                            }
+                        }
+                    ]
                 }
             ]
         }
