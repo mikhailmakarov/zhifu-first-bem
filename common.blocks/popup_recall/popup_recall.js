@@ -4,7 +4,7 @@
 		autoOpen: false,
 		resizable: false,
 		modal : true,
-		width : 900,
+		width : 970,
 		open : function() {
 			var dialog = $(this);
 			$('.ui-widget-overlay').on('click', function() {
