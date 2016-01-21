@@ -32,3 +32,9 @@
         }
     }));
 });*/
+
+(function($) {
+    $('.calc_screen__region_submitter').on('click', function() {
+        $.gritter.add({title: 'Успех!', text: 'Ваш регион успешно установлен'});
+    });
+})(jQuery);
