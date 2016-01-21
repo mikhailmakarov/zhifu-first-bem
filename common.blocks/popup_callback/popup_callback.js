@@ -36,10 +36,61 @@
 		  	$("body").css({ overflow: 'inherit' });
 		}*/
 	});
+
 	$('.popup_callback__close_button').on('click', function() {
 		dialog.dialog('close');
 	});
 	$('.header__callback, .footer__button, .calc_screen__result button').on('click', function() {
 		dialog.dialog('open');
+	});
+	$('.popup_callback button').on('click', function() {
+		var data = {
+			form : 'Заказ обратного звонка',
+			phone : $('.popup_callback input[name=phone]').val()
+		}
+		if(data.phone.replace(/[\D]+/g, '').length > 5) {
+			$.ajax({
+				type: 'POST',
+				url: 'php/ajax.php',
+				timeout: 10*1000,
+				data: data,
+				beforeSend: function(){
+					//ajaxLoader.show();
+				},
+				complete: function(){
+					//ajaxLoader.hide();
+				},
+				success: function(json) {
+					if(json.response === undefined) {
+						$.gritter.add({title: 'Ошибка!', text: 'Возникла ошибка при выполнении запроса'});
+					}
+					else {
+						if(json.response === 'ok') {
+							if(json.response === 'ok' && json.message !== undefined) {
+								$.gritter.add({title: 'Успех!', text: 'Заявка успешно отправлена'});
+							}
+							else {
+								$.gritter.add({title: 'Успех!', text: json.message});
+							}
+							dialog.dialog('close');
+						}
+						else {
+							if(json.response === 'error' && json.message !== undefined) {
+								$.gritter.add({title: 'Ошибка!', text: json.message});
+							}
+							else {
+								$.gritter.add({title: 'Ошибка!', text: 'Возникла ошибка при выполнении запроса'});
+							}
+						}
+					}
+				},
+				error: function() {
+					$.gritter.add({title: 'Ошибка!', text: 'Возникла ошибка при выполнении запроса'});
+				}
+			});
+		}
+		else {
+			$.gritter.add({title: 'Ошибка!', text: 'Введите корректный номер'});
+		}
 	});
 })(jQuery);

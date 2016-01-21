@@ -1,30 +1,11 @@
-(function($) {
-	var dialog = $('.popup_getprices').dialog({
-		dialogClass: 'dialog_fixed',
-		autoOpen: false,
-		resizable: false,
-		modal : true,
-		width : 500,
-		open : function() {
-			var dialog = $(this);
-			$('.ui-widget-overlay').on('click', function() {
-				dialog.dialog('close');
-			});
-		}
-	});
-	$('.popup_getprices__close_button').on('click', function() {
-		dialog.dialog('close');
-	});
-	$('.slider__button').on('click', function() {
-		dialog.dialog('open');
-	});
-
-	$('.popup_getprices button').on('click', function() {
+(function($){
+	$('.promo__form_action button').on('click', function() {
 		var data = {
-			form : 'Получить прайс лист',
-			name : $('.popup_getprices input[name=name]').val(),
-			phone : $('.popup_getprices input[name=phone]').val(),
-			email : $('.popup_getprices input[name=email]').val()
+			form : 'Получить доступ ко всем оптовым ценам на сегодняшний день',
+			name : $('.promo__form_action input[name=name]').val(),
+			phone : $('.promo__form_action input[name=phone]').val(),
+			email : $('.promo__form_action input[name=email]').val(),
+			get_daily_prices : ($('.promo__form_action input[type=checkbox]').prop('checked')) ? 'Да' : 'Нет'
 		}
 		if(data.name.length < 1 ) {
 			return $.gritter.add({title: 'Ошибка!', text: 'Введите ваше имя'});

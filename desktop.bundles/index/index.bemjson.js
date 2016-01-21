@@ -8,12 +8,14 @@ module.exports = {
         { elem : 'meta', attrs : { name : 'author', content : 'Mikhail Makarov' } },
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
         { elem : 'css', url : '../../libs/normalize-css/normalize.css' },
-        { elem : 'css', url : '../../js/jquery-ui.min.css'},
+        { elem : 'css', url : '../../jquery-ui/jquery-ui.min.css'},
+        { elem : 'css', url : '../../jquery-gritter/jquery.gritter.css'},
         { elem : 'css', url : 'index.min.css' }
     ],
     scripts: [
         { elem : 'js', url : '../../libs/jquery/dist/jquery.min.js' },
-        { elem : 'js', url : '../../js/jquery-ui.min.js'},
+        { elem : 'js', url : '../../jquery-ui/jquery-ui.min.js' },
+        { elem : 'js', url : '../../jquery-gritter/jquery.gritter.min.js'},
         { elem : 'js', url : 'index.min.js' }
     ],
     content : [
@@ -1035,6 +1037,147 @@ module.exports = {
         {
             elem : 'last_sub_header',
             content : 'Наш менеджер ответит на все интересующие вопросы за 2 минуты.'
+        },
+        {
+            elem : 'where_to_buy_header',
+            content : 'ГДЕ КУПИТЬ ПРИСТАВКУ DVB-T2 ORION+'
+        },
+        {
+            elem : 'where_to_buy',
+            content : 'г. Москва, Пятницкое шоссе, дом 18, павильон 37'
+        },
+        {
+            block : 'partners',
+            mix : { block : 'wrapper' },
+            content : [
+                {
+                    elem : 'header',
+                    content : 'Наши партнеры:'
+                },
+                {
+                    elem : 'column',
+                    content : [
+                        {
+                            elem : 'region_letter',
+                            content : 'Б'
+                        },
+                        {
+                            elem : 'region_name',
+                            content : 'Брянская область'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Брянск, проспект Ленина, «Центральный дом быта» оф.122<br>http://ciberland.ru<br>+7 (4832) 75-38-99, +7 (4832) 303-312'
+                        },
+                        {
+                            elem : 'region_letter',
+                            content : 'В'
+                        },
+                        {
+                            elem : 'region_name',
+                            content : 'Волгоградская область'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Волгоград, ул. Танкистов, 9<br>http://компас34.рф/<br>+7 (927) 523-77-07, +7 (8443) 55-40-05,<br>+7 (8442) 78-01-52'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Волжский, Б-р Профсоюзов, 9<br>http://компас34.рф/<br>+7 (927) 523-77-07, +7 (8443) 55-40-05,<br>+7 (8442) 78-01-52'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Волжский, ул. Оломоуцкая, д. 35, оф.1<br>http://компас34.рф/<br>+7 (927) 523-77-07, +7 (8443) 55-40-05,<br>+7 (8442) 78-01-52'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Калач-На-Дону, ул. Октябрьская, 305Б<br>http://компас34.рф/<br>+7 (927) 523-77-07, +7 (8443) 55-40-05,<br>+7 (8442) 78-01-52'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Михайловка, ул. Обороны д.57<br>http://компас34.рф/<br>+7 (927) 523-77-07, +7 (8443) 55-40-05,<br>+7 (8442) 78-01-52'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'р.п. Средняя Ахтуба, ул. Пригородная, 2Б<br>http://компас34.рф/<br>+7 (927) 523-77-07, +7 (8443) 55-40-05,<br>+7 (8442) 78-01-52'
+                        }
+                    ]
+                },
+                {
+                    elem : 'column',
+                    content : [
+                        {
+                            elem : 'region_letter',
+                            content : 'М'
+                        },
+                        {
+                            elem : 'region_name',
+                            content : 'Москва и Московская область'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Москва, Пятницкое шоссе, дом 18, павильон 49<br>http://satsupermarket.ru/<br>+7 45-19-60'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Москва Пятницкое шоссе, 18 тк Митинский радиорынок, пав. 53<br>+7 (915) 077-79-99'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Москва, 1-ый проезд Перова поля, дом 8<br>http://www.resiver.org, http://perovotv.ru<br>+7 (495) 306-42-00, +7 (495) 306-27-83'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Москва, ул.Пилота Нестерова, д 5, 3 этаж, офис 8<br>http://3dsattv.ru<br>+7 (495) 609-69-09, +7 (925) 357-20-39'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Москва, Волгоградский пр-т, д.32, к.8<br>http://mastersvyazi.ru<br>+7 (499) 502-00-00'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Москва, Марксистская улица д. 5, оф.23<br>http://avs-moscow.ru<br>+7 (495) 798-44-56, +7 (495) 911-00-36,<br>+7 (909) 919-69-60'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Орехово-Зуево, ул. Володарского д. 106<br>http://trikolor-shop.ru<br>+7 (495) 509-49-84, +7 (926) 898-45-45'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'Подольский район, г. Климовск, ул. 50 лет октября, д. 13 б<br>+7 (925) 059-40-40'
+                        }
+                    ]
+                },
+                {
+                    elem : 'column',
+                    content : [
+                        {
+                            elem : 'region_letter',
+                            content : 'Р'
+                        },
+                        {
+                            elem : 'region_name',
+                            content : 'Рязанская область'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Рязань, ул. Вокзальная д.15<br>http://www.compvek.com<br>+7 (4912) 51-22-25, +7 (4912) 99-58-82,<br>+7 (915) 590-75-00'
+                        },
+                        {
+                            elem : 'region_letter',
+                            content : 'С'
+                        },
+                        {
+                            elem : 'region_name',
+                            content : 'Ставропольский край'
+                        },
+                        {
+                            elem : 'region_item',
+                            content : 'г. Ставрополь, ул. Рогожникова 9<br>http://radio26.ru<br>+7 (8652) 99-13-22, +7 (918) 746-20-61'
+                        }
+                    ]
+                }
+            ]
         },
         {
             block : 'footer',
