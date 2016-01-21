@@ -4,7 +4,8 @@
 		"**/*.blocks/**" : "dist/_",
 		"fonts/**" : "dist/_",
 		"libs/**" : "dist/_",
-		"js/**" : "dist/_"
+		"jquery-ui/**" : "dist/_",
+		"jquery-gritter/**" : "dist/_"
 	},
 
 	"paths" : {
