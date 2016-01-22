@@ -28,23 +28,23 @@ module.exports = {
                     mods : { theme : 'orion' },
                     content : [
                         {
-                            hash : 'get_prices',
+                            hash : '1',
                             content : 'ДОСТУП К ЦЕНАМ'
                         },
                         {
-                            hash : 'catalog',
+                            hash : '2',
                             content : 'КАТАЛОГ'
                         },
                         {
-                            hash : 'catalog',
+                            hash : '3',
                             content : 'РАСЧЕТ ЗАРАБОТКА ПО РЕГИОНУ'
                         },
                         {
-                            hash : 'recalls',
+                            hash : '4',
                             content : 'ОТЗЫВЫ'
                         },
                         {
-                            hash : 'faq',
+                            hash : '5',
                             content : 'ВОПРОСЫ'
                         }
                     ].map(function(item) {
@@ -157,89 +157,92 @@ module.exports = {
                             ]
                         },
                         {
-                            block : 'promo',
-                            attrs : { id : 'get_prices' },
-                            mix : { block : 'clearfix' },
-                            content : [
-                                {
-                                    elem : 'side',
-                                    elemMods : { align : 'left'},
-                                    content : [
-                                        {
-                                            elem : 'header',
-                                            content : 'Сегодня акция!'
-                                        },
-                                        {
-                                            elem : 'sub_header',
-                                            content : 'Первая партия <br> по <br> крупнооптовой цене!'
-                                        }
-                                    ]
-                                },
-                                {
-                                    elem : 'side',
-                                    elemMods : { align : 'right'},
-                                    content : [
-                                        {
-                                            elem : 'form_header',
-                                            content : 'Получите доступ ко всем оптовым ценам на сегодняшний день'
-                                        },
-                                        {
-                                            elem : 'form_action',
-                                            tag : 'form',
-                                            method : 'POST',
-                                            action : 'index.html',
-                                            content : [
-                                                {
-                                                    elem : 'inputs_wrapper',
-                                                    content : [
-                                                        {
-                                                            block : 'input',
-                                                            mods : { theme : 'orion', icon : 'user' },
-                                                            type : 'search',
-                                                            name : 'name',
-                                                            placeholder : 'Введите имя'
-                                                        },
-                                                        {
-                                                            block : 'input',
-                                                            mods : { theme : 'orion', icon : 'phone' },
-                                                            type : 'search',
-                                                            name : 'phone',
-                                                            placeholder : 'Введите телефон'
-                                                        },
-                                                        {
-                                                            block : 'input',
-                                                            mods : { theme : 'orion', icon : 'mail' },
-                                                            type : 'search',
-                                                            name : 'email',
-                                                            placeholder : 'Введите e-mail'
+                            block : 'hash_wrapper',
+                            attrs : { id : '1' },
+                            content : {
+                                block : 'promo',
+                                mix : { block : 'clearfix' },
+                                content : [
+                                    {
+                                        elem : 'side',
+                                        elemMods : { align : 'left'},
+                                        content : [
+                                            {
+                                                elem : 'header',
+                                                content : 'Сегодня акция!'
+                                            },
+                                            {
+                                                elem : 'sub_header',
+                                                content : 'Первая партия <br> по <br> крупнооптовой цене!'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem : 'side',
+                                        elemMods : { align : 'right'},
+                                        content : [
+                                            {
+                                                elem : 'form_header',
+                                                content : 'Получите доступ ко всем оптовым ценам на сегодняшний день'
+                                            },
+                                            {
+                                                elem : 'form_action',
+                                                tag : 'form',
+                                                method : 'POST',
+                                                action : 'index.html',
+                                                content : [
+                                                    {
+                                                        elem : 'inputs_wrapper',
+                                                        content : [
+                                                            {
+                                                                block : 'input',
+                                                                mods : { theme : 'orion', icon : 'user' },
+                                                                type : 'search',
+                                                                name : 'name',
+                                                                placeholder : 'Введите имя'
+                                                            },
+                                                            {
+                                                                block : 'input',
+                                                                mods : { theme : 'orion', icon : 'phone' },
+                                                                type : 'search',
+                                                                name : 'phone',
+                                                                placeholder : 'Введите телефон'
+                                                            },
+                                                            {
+                                                                block : 'input',
+                                                                mods : { theme : 'orion', icon : 'mail' },
+                                                                type : 'search',
+                                                                name : 'email',
+                                                                placeholder : 'Введите e-mail'
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        elem : 'button_wrapper',
+                                                        content : {
+                                                            block : 'button',
+                                                            mods : { theme : 'orion' },
+                                                            type : 'submit',
+                                                            name : 'form',
+                                                            val : '1',
+                                                            text : 'Получить доступ к оптовым ценам'
                                                         }
-                                                    ]
-                                                },
-                                                {
-                                                    elem : 'button_wrapper',
-                                                    content : {
-                                                        block : 'button',
-                                                        mods : { theme : 'orion' },
-                                                        type : 'submit',
-                                                        name : 'form',
-                                                        val : '1',
-                                                        text : 'Получить доступ к оптовым ценам'
+                                                    },
+                                                    {
+                                                        elem : 'checkbox_wrapper',
+                                                        content : {
+                                                            block : 'checkbox',
+                                                            mods : { theme : 'orion' },
+                                                            name : 'subscribe',
+                                                            text : 'Получать ежедневное обновление цен'
+                                                        }
                                                     }
-                                                },
-                                                {
-                                                    elem : 'checkbox_wrapper',
-                                                    content : {
-                                                        block : 'checkbox',
-                                                        mods : { theme : 'orion' },
-                                                        name : 'subscribe',
-                                                        text : 'Получать ежедневное обновление цен'
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         }
                     ]
                 }
@@ -335,11 +338,14 @@ module.exports = {
             }
         },
         {
-            block : 'screen_header',
-            attrs: { id : 'catalog' },
+            block : 'hash_wrapper',
+            attrs: { id : '2' },
             content : {
-                elem : 'text',
-                content : 'КАТАЛОГ'
+                block : 'screen_header',
+                content : {
+                    elem : 'text',
+                    content : 'КАТАЛОГ'
+                }
             }
         },
         {
@@ -422,303 +428,309 @@ module.exports = {
             }
         },
         {
-            block : 'calc_screen',
-            attrs : { id : 'calculator' },
-            js : true,
+            block : 'hash_wrapper',
+            attrs : { id : '3' },
             content : {
-                elem : 'wrapper',
-                content : [
-                    {
-                        elem : 'header',
-                        content : 'Сколько Вы сможете зарабатывать на продаже в своем регионе?'
-                    },
-                    {
-                        elem : 'calc_lines',
-                        content : [
-                            {
-                                elem : 'calc_line',
-                                content : [
-                                    {
-                                        block : 'select',
-                                        mods : { mode: 'radio-check', theme : 'islands', size : 'xl' },
-                                        //type : 'search',
-                                        optionsMaxHeight: 300,
-                                        text : 'Введите регион',
-                                        val : 0,
-                                        options : [
-                                                { text: "Адыгея Респ", val: "01" },
-                                                { text: "Алтай Респ", val: "04" },
-                                                { text: "Алтайский край", val: "22" },
-                                                { text: "Амурская обл", val: "28" },
-                                                { text: "Архангельская обл", val: "29" },
-                                                { text: "Астраханская обл", val: "30" },
-                                                { text: "Башкортостан Респ", val: "02" },
-                                                { text: "Белгородская обл", val: "31" },
-                                                { text: "Брянская обл", val: "32" },
-                                                { text: "Бурятия Респ", val: "03" },
-                                                { text: "Владимирская обл", val: "33" },
-                                                { text: "Волгоградская обл", val: "34" },
-                                                { text: "Вологодская обл", val: "35" },
-                                                { text: "Воронежская обл", val: "36" },
-                                                { text: "Дагестан Респ", val: "05" },
-                                                { text: "Еврейская Аобл", val: "79" },
-                                                { text: "Забайкальский край", val: "75" },
-                                                { text: "Ивановская обл", val: "37" },
-                                                { text: "Ингушетия Респ", val: "06" },
-                                                { text: "Иркутская обл", val: "38" },
-                                                { text: "Кабардино-Балкарская Респ", val: "07" },
-                                                { text: "Калининградская обл", val: "39" },
-                                                { text: "Калмыкия Респ", val: "08" },
-                                                { text: "Калужская обл", val: "40" },
-                                                { text: "Камчатский край", val: "41" },
-                                                { text: "Карачаево-Черкесская Респ", val: "09" },
-                                                { text: "Карелия Респ", val: "10" },
-                                                { text: "Кемеровская обл", val: "42" },
-                                                { text: "Кировская обл", val: "43" },
-                                                { text: "Коми Респ", val: "11" },
-                                                { text: "Костромская обл", val: "44" },
-                                                { text: "Краснодарский край", val: "23" },
-                                                { text: "Красноярский край", val: "24" },
-                                                { text: "Курганская обл", val: "45" },
-                                                { text: "Курская обл", val: "46" },
-                                                { text: "Ленинградская обл", val: "47" },
-                                                { text: "Липецкая обл", val: "48" },
-                                                { text: "Магаданская обл", val: "49" },
-                                                { text: "Марий Эл Респ", val: "12" },
-                                                { text: "Мордовия Респ", val: "13" },
-                                                { text: "Москва г", val: "77" },
-                                                { text: "Московская обл", val: "50" },
-                                                { text: "Мурманская обл", val: "51" },
-                                                { text: "Ненецкий АО", val: "83" },
-                                                { text: "Нижегородская обл", val: "52" },
-                                                { text: "Новгородская обл", val: "53" },
-                                                { text: "Новосибирская обл", val: "54" },
-                                                { text: "Омская обл", val: "55" },
-                                                { text: "Оренбургская обл", val: "56" },
-                                                { text: "Орловская обл", val: "57" },
-                                                { text: "Пензенская обл", val: "58" },
-                                                { text: "Пермский край", val: "59" },
-                                                { text: "Приморский край", val: "25" },
-                                                { text: "Псковская обл", val: "60" },
-                                                { text: "Ростовская обл", val: "61" },
-                                                { text: "Рязанская обл", val: "62" },
-                                                { text: "Самарская обл", val: "63" },
-                                                { text: "Санкт-Петербург г", val: "78" },
-                                                { text: "Саратовская обл", val: "64" },
-                                                { text: "Саха /Якутия/ Респ", val: "14" },
-                                                { text: "Сахалинская обл", val: "65" },
-                                                { text: "Свердловская обл", val: "66" },
-                                                { text: "Северная Осетия - Алания Респ", val: "15" },
-                                                { text: "Смоленская обл", val: "67" },
-                                                { text: "Ставропольский край", val: "26" },
-                                                { text: "Тамбовская обл", val: "68" },
-                                                { text: "Татарстан Респ", val: "16" },
-                                                { text: "Тверская обл", val: "69" },
-                                                { text: "Томская обл", val: "70" },
-                                                { text: "Тульская обл", val: "71" },
-                                                { text: "Тыва Респ", val: "17" },
-                                                { text: "Тюменская обл", val: "72" },
-                                                { text: "Удмуртская Респ", val: "18" },
-                                                { text: "Ульяновская обл", val: "73" },
-                                                { text: "Хабаровский край", val: "27" },
-                                                { text: "Хакасия Респ", val: "19" },
-                                                { text: "Ханты-Мансийский Автономный округ - Югра АО", val: "86" },
-                                                { text: "Челябинская обл", val: "74" },
-                                                { text: "Чеченская Респ", val: "20" },
-                                                { text: "Чувашская Респ", val: "21" },
-                                                { text: "Чукотский АО", val: "87" },
-                                                { text: "Ямало-Ненецкий АО", val: "89" },
-                                                { text: "Ярославская обл", val: "76" }
-                                        ]
-                                    },
-                                    {
-                                        block : 'input',
-                                        mods : { theme : 'orion' },
-                                        type : 'search',
-                                        placeholder : 'Введите город'
-                                    },
-                                    {
-                                        block : 'button',
-                                        mix : { block : 'calc_screen', elem : 'region_submitter'},
-                                        mods : { theme : 'orion' },
-                                        text : 'ВЫБРАТЬ'
-                                    }
-                                ]
-                            },
-                            {
-                                elem : 'calc_line',
-                                content : [
-                                    {
-                                        elem : 'calc_line_centering',
-                                        content : [
-                                            {
-                                                elem : 'calc_line_header',
-                                                content : 'ОБЪЕМ ЗАКУПКИ ПРИСТАВОК (руб.)'
-                                            },
-                                            {
-                                                block : 'input',
-                                                mix : { block : 'calc_screen', elem : 'purchases_input' },
-                                                mods : { theme : 'orion_short', type : 'search' },
-                                                val : '50000'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem : 'slider',
-                                        js : true
-                                    },
-                                    {
-                                        elem : 'calc_line_centering',
-                                        content : [
-                                            {
-                                                text : '5&nbsp;тыс.руб'
-                                            },
-                                            {
-                                                text : '50&nbsp;тыс.руб'
-                                            },
-                                            {
-                                                text : '100&nbsp;тыс.руб'
-                                            },
-                                            {
-                                                text : '150&nbsp;тыс.руб'
-                                            }
-                                        ].map(function(item) {
-                                            return {
-                                                elem : 'sub_text',
-                                                content : item.text
-                                            };
-                                        })
-                                    }
-                                ]
-                            },
-                            {
-                                elem : 'calc_line',
-                                content : [
-                                    {
-                                        elem : 'calc_line_centering',
-                                        content : [
-                                            {
-                                                elem : 'calc_line_header',
-                                                content : 'ИЗДЕРЖКИ - АРЕНДА, ЗАРПЛАТА (руб.)'
-                                            },
-                                            {
-                                                block : 'input',
-                                                mix : { block : 'calc_screen', elem : 'outgoings_input' },
-                                                mods : { theme : 'orion_short', type : 'search' },
-                                                val : '10000'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        elem : 'slider',
-                                        js : true
-                                    },
-                                    {
-                                        elem : 'calc_line_centering',
-                                        content : [
-                                            {
-                                                text : '5&nbsp;тыс.руб'
-                                            },
-                                            {
-                                                text : '15&nbsp;тыс.руб'
-                                            },
-                                            {
-                                                text : '30&nbsp;тыс.руб'
-                                            },
-                                            {
-                                                text : '60&nbsp;тыс.руб'
-                                            }
-                                        ].map(function(item) {
-                                            return {
-                                                elem : 'sub_text',
-                                                content : item.text
-                                            };
-                                        })
-                                    }
-                                ]
-                            },
-                            {
-                                elem : 'calc_line',
-                                content : [
-                                    {
-                                        elem : 'calc_line_header',
-                                        mods : { float : 'left' },
-                                        content : 'НАЦЕНКА'
-                                    },
-                                    {
-                                        block : 'radio-group',
-                                        val : 75,
-                                        mix : { block : 'calc_screen', elem : 'nacenka_selector' },
-                                        mods : { theme : 'orion', type : 'line' },
-                                        options : [
-                                            { val : 50, text : '50%' },
-                                            { val : 75, text : '75%' },
-                                            { val : 100, text : '100%' }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        elem : 'bottom',
-                        content : [
-                            {
-                                elem : 'bottom_item',
-                                content : [
-                                    {
-                                        block : 'image',
-                                        url : '../../img/purchases.png'
-                                    },
-                                    'Закупка: ',
-                                    {
-                                        elem : 'purchases_num',
-                                        tag : 'span',
-                                        content : '50&nbsp;000&nbsp;руб.'
-                                    }
-                                ]
-                            },
-                            {
-                                elem : 'bottom_item',
-                                content : [
-                                    {
-                                        block : 'image',
-                                        url : '../../img/profit.png'
-                                    },
-                                    'Чистая прибыль: ',
-                                    {
-                                        elem : 'profit_num',
-                                        tag : 'span',
-                                        content : '105&nbsp;000&nbsp;руб.'
-                                    }
-                                ]
-                            },
-                            {
-                                elem : 'result',
-                                content : [
-                                    'За 12 месяцев я получу:',
-                                    {
-                                        elem : 'profit_year',
-                                        content : '1&nbsp;260&nbsp;000&nbsp;руб.'
-                                    },
-                                    {
-                                        block : 'button',
-                                        mods : { theme : 'orion' },
-                                        text : 'Хочу такую прибыль'
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
+                block : 'calc_screen',
+                js : true,
+                content : {
+                    elem : 'wrapper',
+                    content : [
+                        {
+                            elem : 'header',
+                            content : 'Сколько Вы сможете зарабатывать на продаже в своем регионе?'
+                        },
+                        {
+                            elem : 'calc_lines',
+                            content : [
+                                {
+                                    elem : 'calc_line',
+                                    content : [
+                                        {
+                                            block : 'select',
+                                            mods : { mode: 'radio-check', theme : 'islands', size : 'xl' },
+                                            //type : 'search',
+                                            optionsMaxHeight: 300,
+                                            text : 'Введите регион',
+                                            val : 0,
+                                            options : [
+                                                    { text: "Адыгея Респ", val: "01" },
+                                                    { text: "Алтай Респ", val: "04" },
+                                                    { text: "Алтайский край", val: "22" },
+                                                    { text: "Амурская обл", val: "28" },
+                                                    { text: "Архангельская обл", val: "29" },
+                                                    { text: "Астраханская обл", val: "30" },
+                                                    { text: "Башкортостан Респ", val: "02" },
+                                                    { text: "Белгородская обл", val: "31" },
+                                                    { text: "Брянская обл", val: "32" },
+                                                    { text: "Бурятия Респ", val: "03" },
+                                                    { text: "Владимирская обл", val: "33" },
+                                                    { text: "Волгоградская обл", val: "34" },
+                                                    { text: "Вологодская обл", val: "35" },
+                                                    { text: "Воронежская обл", val: "36" },
+                                                    { text: "Дагестан Респ", val: "05" },
+                                                    { text: "Еврейская Аобл", val: "79" },
+                                                    { text: "Забайкальский край", val: "75" },
+                                                    { text: "Ивановская обл", val: "37" },
+                                                    { text: "Ингушетия Респ", val: "06" },
+                                                    { text: "Иркутская обл", val: "38" },
+                                                    { text: "Кабардино-Балкарская Респ", val: "07" },
+                                                    { text: "Калининградская обл", val: "39" },
+                                                    { text: "Калмыкия Респ", val: "08" },
+                                                    { text: "Калужская обл", val: "40" },
+                                                    { text: "Камчатский край", val: "41" },
+                                                    { text: "Карачаево-Черкесская Респ", val: "09" },
+                                                    { text: "Карелия Респ", val: "10" },
+                                                    { text: "Кемеровская обл", val: "42" },
+                                                    { text: "Кировская обл", val: "43" },
+                                                    { text: "Коми Респ", val: "11" },
+                                                    { text: "Костромская обл", val: "44" },
+                                                    { text: "Краснодарский край", val: "23" },
+                                                    { text: "Красноярский край", val: "24" },
+                                                    { text: "Курганская обл", val: "45" },
+                                                    { text: "Курская обл", val: "46" },
+                                                    { text: "Ленинградская обл", val: "47" },
+                                                    { text: "Липецкая обл", val: "48" },
+                                                    { text: "Магаданская обл", val: "49" },
+                                                    { text: "Марий Эл Респ", val: "12" },
+                                                    { text: "Мордовия Респ", val: "13" },
+                                                    { text: "Москва г", val: "77" },
+                                                    { text: "Московская обл", val: "50" },
+                                                    { text: "Мурманская обл", val: "51" },
+                                                    { text: "Ненецкий АО", val: "83" },
+                                                    { text: "Нижегородская обл", val: "52" },
+                                                    { text: "Новгородская обл", val: "53" },
+                                                    { text: "Новосибирская обл", val: "54" },
+                                                    { text: "Омская обл", val: "55" },
+                                                    { text: "Оренбургская обл", val: "56" },
+                                                    { text: "Орловская обл", val: "57" },
+                                                    { text: "Пензенская обл", val: "58" },
+                                                    { text: "Пермский край", val: "59" },
+                                                    { text: "Приморский край", val: "25" },
+                                                    { text: "Псковская обл", val: "60" },
+                                                    { text: "Ростовская обл", val: "61" },
+                                                    { text: "Рязанская обл", val: "62" },
+                                                    { text: "Самарская обл", val: "63" },
+                                                    { text: "Санкт-Петербург г", val: "78" },
+                                                    { text: "Саратовская обл", val: "64" },
+                                                    { text: "Саха /Якутия/ Респ", val: "14" },
+                                                    { text: "Сахалинская обл", val: "65" },
+                                                    { text: "Свердловская обл", val: "66" },
+                                                    { text: "Северная Осетия - Алания Респ", val: "15" },
+                                                    { text: "Смоленская обл", val: "67" },
+                                                    { text: "Ставропольский край", val: "26" },
+                                                    { text: "Тамбовская обл", val: "68" },
+                                                    { text: "Татарстан Респ", val: "16" },
+                                                    { text: "Тверская обл", val: "69" },
+                                                    { text: "Томская обл", val: "70" },
+                                                    { text: "Тульская обл", val: "71" },
+                                                    { text: "Тыва Респ", val: "17" },
+                                                    { text: "Тюменская обл", val: "72" },
+                                                    { text: "Удмуртская Респ", val: "18" },
+                                                    { text: "Ульяновская обл", val: "73" },
+                                                    { text: "Хабаровский край", val: "27" },
+                                                    { text: "Хакасия Респ", val: "19" },
+                                                    { text: "Ханты-Мансийский Автономный округ - Югра АО", val: "86" },
+                                                    { text: "Челябинская обл", val: "74" },
+                                                    { text: "Чеченская Респ", val: "20" },
+                                                    { text: "Чувашская Респ", val: "21" },
+                                                    { text: "Чукотский АО", val: "87" },
+                                                    { text: "Ямало-Ненецкий АО", val: "89" },
+                                                    { text: "Ярославская обл", val: "76" }
+                                            ]
+                                        },
+                                        {
+                                            block : 'input',
+                                            mods : { theme : 'orion' },
+                                            type : 'search',
+                                            placeholder : 'Введите город'
+                                        },
+                                        {
+                                            block : 'button',
+                                            mix : { block : 'calc_screen', elem : 'region_submitter'},
+                                            mods : { theme : 'orion' },
+                                            text : 'ВЫБРАТЬ'
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'calc_line',
+                                    content : [
+                                        {
+                                            elem : 'calc_line_centering',
+                                            content : [
+                                                {
+                                                    elem : 'calc_line_header',
+                                                    content : 'ОБЪЕМ ЗАКУПКИ ПРИСТАВОК (руб.)'
+                                                },
+                                                {
+                                                    block : 'input',
+                                                    mix : { block : 'calc_screen', elem : 'purchases_input' },
+                                                    mods : { theme : 'orion_short', type : 'search' },
+                                                    val : '50000'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            elem : 'slider',
+                                            js : true
+                                        },
+                                        {
+                                            elem : 'calc_line_centering',
+                                            content : [
+                                                {
+                                                    text : '5&nbsp;тыс.руб'
+                                                },
+                                                {
+                                                    text : '50&nbsp;тыс.руб'
+                                                },
+                                                {
+                                                    text : '100&nbsp;тыс.руб'
+                                                },
+                                                {
+                                                    text : '150&nbsp;тыс.руб'
+                                                }
+                                            ].map(function(item) {
+                                                return {
+                                                    elem : 'sub_text',
+                                                    content : item.text
+                                                };
+                                            })
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'calc_line',
+                                    content : [
+                                        {
+                                            elem : 'calc_line_centering',
+                                            content : [
+                                                {
+                                                    elem : 'calc_line_header',
+                                                    content : 'ИЗДЕРЖКИ - АРЕНДА, ЗАРПЛАТА (руб.)'
+                                                },
+                                                {
+                                                    block : 'input',
+                                                    mix : { block : 'calc_screen', elem : 'outgoings_input' },
+                                                    mods : { theme : 'orion_short', type : 'search' },
+                                                    val : '10000'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            elem : 'slider',
+                                            js : true
+                                        },
+                                        {
+                                            elem : 'calc_line_centering',
+                                            content : [
+                                                {
+                                                    text : '5&nbsp;тыс.руб'
+                                                },
+                                                {
+                                                    text : '15&nbsp;тыс.руб'
+                                                },
+                                                {
+                                                    text : '30&nbsp;тыс.руб'
+                                                },
+                                                {
+                                                    text : '60&nbsp;тыс.руб'
+                                                }
+                                            ].map(function(item) {
+                                                return {
+                                                    elem : 'sub_text',
+                                                    content : item.text
+                                                };
+                                            })
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'calc_line',
+                                    content : [
+                                        {
+                                            elem : 'calc_line_header',
+                                            mods : { float : 'left' },
+                                            content : 'НАЦЕНКА'
+                                        },
+                                        {
+                                            block : 'radio-group',
+                                            val : 75,
+                                            mix : { block : 'calc_screen', elem : 'nacenka_selector' },
+                                            mods : { theme : 'orion', type : 'line' },
+                                            options : [
+                                                { val : 50, text : '50%' },
+                                                { val : 75, text : '75%' },
+                                                { val : 100, text : '100%' }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            elem : 'bottom',
+                            content : [
+                                {
+                                    elem : 'bottom_item',
+                                    content : [
+                                        {
+                                            block : 'image',
+                                            url : '../../img/purchases.png'
+                                        },
+                                        'Закупка: ',
+                                        {
+                                            elem : 'purchases_num',
+                                            tag : 'span',
+                                            content : '50&nbsp;000&nbsp;руб.'
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'bottom_item',
+                                    content : [
+                                        {
+                                            block : 'image',
+                                            url : '../../img/profit.png'
+                                        },
+                                        'Чистая прибыль: ',
+                                        {
+                                            elem : 'profit_num',
+                                            tag : 'span',
+                                            content : '105&nbsp;000&nbsp;руб.'
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'result',
+                                    content : [
+                                        'За 12 месяцев я получу:',
+                                        {
+                                            elem : 'profit_year',
+                                            content : '1&nbsp;260&nbsp;000&nbsp;руб.'
+                                        },
+                                        {
+                                            block : 'button',
+                                            mods : { theme : 'orion' },
+                                            text : 'Хочу такую прибыль'
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
             }
         },
         {
-            block : 'screen_header',
-            attrs : { id : 'recalls' },
+            block : 'hash_wrapper',
+            attrs : { id : '4' },
             content : {
-                elem : 'text',
-                content : 'Посмотрите результаты наших клиентов'
+                block : 'screen_header',
+                content : {
+                    elem : 'text',
+                    content : 'Посмотрите результаты наших клиентов'
+                }
             }
         },
         {
@@ -1050,68 +1062,71 @@ module.exports = {
             }
         },
         {
-            block : 'faq',
-            attrs : { id : 'faq' },
-            js : true,
+            block : 'hash_wrapper',
+            attrs : { id : '5' },
             content : {
-                elem : 'wrapper',
-                mix : { block : 'wrapper' },
-                content : [
-                    {
-                        elem : 'header',
-                        content : '4 вопроса, которые задает каждый 2-й наш клиент:'
-                    },
-                    [
+                block : 'faq',
+                js : true,
+                content : {
+                    elem : 'wrapper',
+                    mix : { block : 'wrapper' },
+                    content : [
                         {
-                            question : 'Какая минимальная партия закупки?',
-                            answer : 'Минимальная партия закупки составляет от 10 штук'
+                            elem : 'header',
+                            content : '4 вопроса, которые задает каждый 2-й наш клиент:'
                         },
-                        {
-                            question : 'Как сделать заказ?',
-                            answer : 'Вы оставляете заявку или звоните по телефону + 8 (800) 400-11-29<br>Мы высылаем Вам свежий прайс в формате Exel (с пометками на хитах продаж), Вы отмечаете какие Вам интересны и в каком количестве или объясняете нашему менеджеру по телефону.'
-                        },
-                        {
-                            question : 'Как часто меняется прайс лист?',
-                            answer : 'В связи с нестабильным курсом доллара прайс меняется каждый день, но Вам не нужно будет запрашивать его все время.<br>Достаточно один раз оставить заявку на сайте и Вы будите получать свежий прайс автоматически каждый день.'
-                        },
-                        {
-                            question : 'Можно ли купить в рассрочку или кредит?',
-                            answer : 'Нет, мы не продаем товар в кредит или рассрочку'
-                        }
-                    ].map(function (item) {
-                        return {
-                            elem : 'item_container',
-                            mix : { block : 'faq', elem : 'answer_hidden' },
-                            content : [
-                                {
-                                    elem : 'question',
-                                    content : [
-                                        {
-                                            elem : 'question_text',
-                                            content : item.question
-                                        },
-                                        {
-                                            elem : 'question_button',
-                                            content : [
-                                                'Читать ответ',
-                                                {
-                                                    block : 'button',
-                                                    mix : { block : 'faq', elem : 'button' },
-                                                    mods : { theme : 'orion' },
-                                                    text : '>'
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    elem : 'answer',
-                                    content : item.answer
-                                }
-                            ]
-                        };
-                    })
-                ]
+                        [
+                            {
+                                question : 'Какая минимальная партия закупки?',
+                                answer : 'Минимальная партия закупки составляет от 10 штук'
+                            },
+                            {
+                                question : 'Как сделать заказ?',
+                                answer : 'Вы оставляете заявку или звоните по телефону + 8 (800) 400-11-29<br>Мы высылаем Вам свежий прайс в формате Exel (с пометками на хитах продаж), Вы отмечаете какие Вам интересны и в каком количестве или объясняете нашему менеджеру по телефону.'
+                            },
+                            {
+                                question : 'Как часто меняется прайс лист?',
+                                answer : 'В связи с нестабильным курсом доллара прайс меняется каждый день, но Вам не нужно будет запрашивать его все время.<br>Достаточно один раз оставить заявку на сайте и Вы будите получать свежий прайс автоматически каждый день.'
+                            },
+                            {
+                                question : 'Можно ли купить в рассрочку или кредит?',
+                                answer : 'Нет, мы не продаем товар в кредит или рассрочку'
+                            }
+                        ].map(function (item) {
+                            return {
+                                elem : 'item_container',
+                                mix : { block : 'faq', elem : 'answer_hidden' },
+                                content : [
+                                    {
+                                        elem : 'question',
+                                        content : [
+                                            {
+                                                elem : 'question_text',
+                                                content : item.question
+                                            },
+                                            {
+                                                elem : 'question_button',
+                                                content : [
+                                                    'Читать ответ',
+                                                    {
+                                                        block : 'button',
+                                                        mix : { block : 'faq', elem : 'button' },
+                                                        mods : { theme : 'orion' },
+                                                        text : '>'
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem : 'answer',
+                                        content : item.answer
+                                    }
+                                ]
+                            };
+                        })
+                    ]
+                }
             }
         },
         {
