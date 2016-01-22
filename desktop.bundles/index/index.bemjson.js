@@ -1295,7 +1295,9 @@ module.exports = {
                         content : [
                             {
                                 elem : 'header',
-                                content : 'Этот сайт увидел свет в рекламной студии'
+                                tag : 'a',
+                                attrs : { target : '_blank', href : '//edison.bz/razrabotka_landing_page?utm_source=с_сайта_ориона&utm_medium=с_сайта_ориона&utm_campaign=с_сайта_ориона&utm_content=с_сайта_ориона&utm_term=с_сайта_ориона' },
+                                content : 'Разработка Landing Page'
                             },
                             {
                                 elem : 'logo'
