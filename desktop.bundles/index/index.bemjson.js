@@ -1297,7 +1297,7 @@ module.exports = {
                                 elem : 'header',
                                 tag : 'a',
                                 attrs : { target : '_blank', href : '//edison.bz/sozdanie_lending_peydzh?utm_source=с_сайта_приставок&utm_medium=с_сайта_приставок&utm_campaign=с_сайта_приставок&utm_content=с_сайта_приставок&utm_term=с_сайта_приставок' },
-                                content : 'Разработка лендинг пейдж'
+                                content : 'Создание лендинг пейдж'
                             },
                             {
                                 elem : 'logo'
