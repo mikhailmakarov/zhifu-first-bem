@@ -1,7 +1,6 @@
 (function($) {
 	function tab() {
 		var activeTab = $('.popup_tech__tab.popup_tech__tab_active:first').attr('tabid');
-		console.log(activeTab);
 		$('.popup_tech__tab_content_active').removeClass('popup_tech__tab_content_active');
 		$('.popup_tech__content .popup_tech__tab_content_num_' + activeTab).addClass('popup_tech__tab_content_active');
 	}
