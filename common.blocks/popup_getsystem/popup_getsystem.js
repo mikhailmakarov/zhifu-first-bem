@@ -48,6 +48,7 @@
 								$.gritter.add({title: 'Успех!', text: json.message});
 							}
 							dialog.dialog('close');
+							window.location.href = 'thankyou.html';
 						}
 						else {
 							if(json.response === 'error' && json.message !== undefined) {

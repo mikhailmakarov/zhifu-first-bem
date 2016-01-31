@@ -1,10 +1,10 @@
 module.exports = {
     block : 'page',
-    title : 'ORION+',
+    title : 'DVB T2 приставка, оптом - Всем крупнооптовая цена! Жми!',
     favicon : '/favicon.ico',
     head : [
-        { elem : 'meta', attrs : { name : 'description', content : 'ORION+' } },
-        { elem : 'meta', attrs : { name : 'keywords', content : 'ORION+' } },
+        { elem : 'meta', attrs : { name : 'description', content : 'Оптовая продажа приставок DVB-T2, с наценкой до 100% в условиях кризиса! Начинайте зарабатывать от 50 000 рублей на бесплатном цифровом телевидении!' } },
+        { elem : 'meta', attrs : { name : 'keywords', content : 'приставка dvb t2' } },
         { elem : 'meta', attrs : { name : 'author', content : 'Mikhail Makarov' } },
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
         { elem : 'css', url : '../../libs/normalize-css/normalize.css' },
@@ -1159,7 +1159,7 @@ module.exports = {
         },
         {
             elem : 'where_to_buy',
-            content : 'г. Москва, Пятницкое шоссе, дом 18, павильон 37'
+            content : 'г. Москва, Пятницкое шоссе, дом 18, павильон 6'
         },
  /*       {
             block : 'partners',
