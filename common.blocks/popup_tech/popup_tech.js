@@ -10,13 +10,17 @@
 		autoOpen: false,
 		resizable: false,
 		modal : true,
-		width : 700,
+		width : '85%',
 		open : function() {
 			var dialog = $(this);
 			$('.ui-widget-overlay').on('click', function() {
 				dialog.dialog('close');
 			});
+			$("body").css({ overflow: 'hidden' });
 			tab();
+		},
+		beforeClose: function() {
+		  	$("body").css({ overflow: 'inherit' });
 		}
 	});
 	$('.popup_tech__close_button').on('click', function() {
