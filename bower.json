@@ -12,6 +12,7 @@
   "dependencies": {
     "bem-components": "2.4.0",
     "normalize-css": "normalize.css#~3.0.3",
-    "jquery-ui": "jqueryui#~1.11.4"
+    "jquery-ui": "jqueryui#~1.11.4",
+    "bootstrap": "~3.3.6"
   }
 }

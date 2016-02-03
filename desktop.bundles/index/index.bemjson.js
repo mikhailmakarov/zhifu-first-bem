@@ -8,6 +8,7 @@ module.exports = {
         { elem : 'meta', attrs : { name : 'author', content : 'Mikhail Makarov' } },
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
         { elem : 'css', url : '../../libs/normalize-css/normalize.css' },
+        { elem : 'css', url : '../../libs/bootstrap/dist/css/bootstrap.min.css' },
         { elem : 'css', url : '../../jquery-ui/jquery-ui.min.css'},
         { elem : 'css', url : '../../jquery-gritter/jquery.gritter.css'},
         { elem : 'css', url : 'index.min.css' }
@@ -16,6 +17,7 @@ module.exports = {
         { elem : 'js', url : '../../libs/jquery/dist/jquery.min.js' },
         { elem : 'js', url : '../../jquery-ui/jquery-ui.min.js' },
         { elem : 'js', url : '../../jquery-gritter/jquery.gritter.min.js'},
+        { elem : 'js', url : '../../libs/bootstrap/js/modal.js'},
         { elem : 'js', url : 'index.min.js' }
     ],
     content : [
@@ -1097,7 +1099,7 @@ module.exports = {
                             },
                             {
                                 question : 'Как сделать заказ?',
-                                answer : 'Вы оставляете заявку или звоните по телефону + 8 (800) 400-11-29<br>Мы высылаем Вам свежий прайс в формате Exel (с пометками на хитах продаж), Вы отмечаете какие Вам интересны и в каком количестве или объясняете нашему менеджеру по телефону.'
+                                answer : 'Вы оставляете заявку или звоните по телефону +7 (499) 341-40-55<br>Мы высылаем Вам свежий прайс в формате Exel (с пометками на хитах продаж), Вы отмечаете какие приставки Вам интересны и в каком количестве или объясняете нашему менеджеру по телефону.'
                             },
                             {
                                 question : 'Как часто меняется прайс лист?',
