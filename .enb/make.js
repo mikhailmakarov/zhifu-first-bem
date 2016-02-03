@@ -127,4 +127,13 @@ module.exports = function(config) {
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.borschik.html', '?.min.css', '?.min.js']);
     });
+
+    config.mode('production', function() {
+        config.nodes('*.bundles/*', function(nodeConfig) {
+            nodeConfig.addTechs([
+                // html beautify
+                [beautify, { htmlFile: '_?.borschik.html', target: '?.html' }]
+            ]);
+        });
+    });
 };
