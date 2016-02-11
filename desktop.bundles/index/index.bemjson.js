@@ -217,6 +217,7 @@ module.exports = {
                                                             {
                                                                 block : 'input',
                                                                 mods : { theme : 'orion', icon : 'phone' },
+                                                                val : '+7',
                                                                 type : 'search',
                                                                 name : 'phone',
                                                                 placeholder : 'Введите телефон'
@@ -1162,7 +1163,7 @@ module.exports = {
             elem : 'last_sub_header',
             content : 'Наш менеджер ответит на все интересующие вопросы за 2 минуты.'
         },
-        {
+/*      {
             elem : 'where_to_buy_header',
             content : 'ГДЕ КУПИТЬ ПРИСТАВКУ DVB-T2 ORION+'
         },
@@ -1170,7 +1171,7 @@ module.exports = {
             elem : 'where_to_buy',
             content : 'г. Москва, Пятницкое шоссе, дом 18, павильон 6'
         },
- /*       {
+        {
             block : 'partners',
             mix : { block : 'wrapper' },
             content : [
@@ -1373,6 +1374,7 @@ module.exports = {
                         block : 'input',
                         mods : { theme : 'orion', icon : 'phone' },
                         name : 'phone',
+                        val : '+7',
                         placeholder : 'Введите телефон'
                     }
                 },
@@ -1407,6 +1409,7 @@ module.exports = {
                         block : 'input',
                         mods : { theme : 'orion', icon : 'phone' },
                         name : 'phone',
+                        val : '+7',
                         placeholder : 'Введите телефон'
                     }
                 },
@@ -1450,6 +1453,7 @@ module.exports = {
                         block : 'input',
                         mods : { theme : 'orion', icon : 'phone' },
                         name : 'phone',
+                        val : '+7',
                         placeholder : 'Введите телефон'
                     }
                 },
